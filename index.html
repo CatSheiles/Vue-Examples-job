@@ -1,0 +1,36 @@
+<!--Vue basics how to use examples
+    below are Vue basics - 5 different apps with great basic code to learn Vue
+    All you need to add a Vue component is put the Vue script tag 
+        at bottom of html-->
+
+<h1 id="vueRoot">{{helloMessage}} {{message2}}</h1> <!--*moustache property...lol-->
+
+<div id="app2">
+    <h1 v-if="visible">Hidden element</h1>
+    <button onclick="toggleElement()">clicked</button>
+</div>
+
+<div id="showlist"> <!--push a formatted list to the screen-->
+    <ol>
+        <li v-for="todo in todos">
+            {{todo.text}}
+        </li>
+    </ol>
+    <input onchange="extraItem(this)">
+</div>
+
+<div id="app4">
+    <p>{{ message }}</p>
+    <input v-model="message">
+</div>
+
+<div id="app5"> <!--all card text is defined in javascript very cool-->
+    <card></card>
+    <card></card>
+    <card></card>
+    <card></card>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="script.js"></script>
+
